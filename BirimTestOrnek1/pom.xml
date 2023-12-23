@@ -21,6 +21,7 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<!-- Diğer plugin konfigürasyonları buraya gelebilir -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -40,7 +41,18 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>com.github.ferstl</groupId>
+				<artifactId>depgraph-maven-plugin</artifactId>
+				<version>4.0.1</version> <!-- Kullandığınız en son sürümü ekleyin -->
+				<executions>
+					<execution>
+						<goals>
+							<goal>graph</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
-
